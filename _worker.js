@@ -28,7 +28,7 @@ let enableSocks = false;
 let fakeUserID ;
 let fakeHostName ;
 let noTLS = 'false'; 
-const expire = 4102329600;//2099-12-31
+const expire = 4102329600;//3000-01-01
 let proxyIPs;
 let addresses = [];
 let addressesapi = [];
@@ -1271,11 +1271,7 @@ clash-meta
 ${clash}
 ---------------------------------------------------------------
 ################################################################
-telegram 交流群 技术大佬~在线发牌!
-https://t.me/CMLiussss
----------------------------------------------------------------
-github 项目地址 Star!Star!Star!!!
-https://github.com/cmliu/edgetunnel
+Cloudflare cdn 全球加速服务 请遵循当地法律 禁止非法用途
 ---------------------------------------------------------------
 ################################################################
 `;
@@ -1614,7 +1610,7 @@ function subAddresses(host,UUID,noTLS,newAddressesapi,newAddressescsv,newAddress
 			if(proxyhosts.length > 0 && (伪装域名.includes('.workers.dev') || 伪装域名.includes('pages.dev'))) {
 				最终路径 = `/${伪装域名}${最终路径}`;
 				伪装域名 = proxyhosts[Math.floor(Math.random() * proxyhosts.length)];
-				节点备注 = ` 已启用临时域名中转服务，请尽快绑定自定义域！`;
+				节点备注 = ` 已启用中转服务`;
 			}
 
 			const vlessLink = `vless://${UUID}@${address}:${port}?encryption=none&security=&type=ws&host=${伪装域名}&path=${encodeURIComponent(最终路径)}#${encodeURIComponent(addressid + 节点备注)}`;
@@ -1676,7 +1672,7 @@ function subAddresses(host,UUID,noTLS,newAddressesapi,newAddressescsv,newAddress
 		if(proxyhosts.length > 0 && (伪装域名.includes('.workers.dev') || 伪装域名.includes('pages.dev'))) {
 			最终路径 = `/${伪装域名}${最终路径}`;
 			伪装域名 = proxyhosts[Math.floor(Math.random() * proxyhosts.length)];
-			节点备注 = ` 已启用临时域名中转服务，请尽快绑定自定义域！`;
+			节点备注 = ` 已启用中转服务`;
 		}
 		
 		const 协议类型 = atob(啥啥啥_写的这是啥啊);
